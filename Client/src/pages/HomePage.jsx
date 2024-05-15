@@ -4,6 +4,7 @@ import React from "react";
 import UserImg from "../images/UserImg.svg";
 import RecipeCover from "../components/RecipeCover";
 import ChefCover from "../components/ChefCover";
+import "../styles/homePage.css";
 
 const HomePage = () => {
     return (
@@ -13,8 +14,8 @@ const HomePage = () => {
                     <img src={UserImg} alt="" />
                 </div>
                 <div className="rightBar">
-                    <FontAwesomeIcon icon={faUser} />
-                    <FontAwesomeIcon icon={faBell} />
+                    <FontAwesomeIcon className="icon" icon={faUser}  />
+                    <FontAwesomeIcon className="icon" icon={faBell} />
                 </div>
             </div>
             <div className="greeting">
@@ -63,6 +64,8 @@ const HomePage = () => {
             </div>
             <div className="recipes">
                 <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
             </div>
 
             <div className="heading">
@@ -72,6 +75,10 @@ const HomePage = () => {
                 <FontAwesomeIcon icon = {faKitchenSet}/>
             </div>
             <div className="chefs">
+                <ChefCover />
+                <ChefCover />
+                <ChefCover />
+                <ChefCover />
                 <ChefCover />
             </div>
         </div>
