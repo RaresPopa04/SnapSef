@@ -1,0 +1,104 @@
+
+.recipeName{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+
+}
+.recipeCover{
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.recipeImg{
+    width: 250px;
+    height: 250px;
+    margin-bottom: -40px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.recipeImg img{
+    width: 100%;
+    height: auto;
+}
+
+.chefSection{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.chefSection img{
+    height: 100%;
+    width: auto;
+
+}
+.lowerPart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+.recipeInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+.recipeInfo .info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+.recipeDetails{
+    padding: 10px 20px;
+    padding-top: 50px;
+    background-color: var(--primary-color);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-bottom-right-radius: 60px;
+}
+
+.saveButton{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    color: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    border: solid 6px var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.saveButton.bookmarked{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.saveButton:hover
+{
+    background-color: var(--primary-color);
+    color: white;
+}

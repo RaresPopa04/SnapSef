@@ -1,0 +1,31 @@
+
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+}
+
+.container .startButton{
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--secondary-color);
+    border-radius: 10px;
+    font-size: 3rem;
+    max-width: 700px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    height: 80px;
+    transition: background-color 0.3s, color 0.3s;
+
+
+}
+
+.container button:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
