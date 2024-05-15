@@ -73,9 +73,6 @@ const HomePage = () => {
             </div>
             <div className="chefs">
                 <ChefCover />
-                <ChefCover />
-                <ChefCover />
-                <ChefCover />
             </div>
         </div>
     );

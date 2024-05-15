@@ -64,6 +64,7 @@
     margin: 10px 0;
 }
 .recipeDetails{
+    min-width: 300px;
     padding: 10px 20px;
     padding-top: 50px;
     background-color: var(--primary-color);

@@ -1,0 +1,87 @@
+.chefCover{
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.chefImg{
+    width: 200px;
+    height: 200px;
+    margin-bottom: -40px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.chefImg img{
+    object-fit:cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.chefDetails{
+    min-width: 250px;
+    padding: 30px 20px;
+    padding-top: 50px;
+    background-color: var(--primary-color);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-bottom-right-radius: 60px;
+}
+
+.chefName{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lowerpart{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+
+.lowerpart .elem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.followButton{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    border: solid 6px var(--primary-color);
+    color: var(--primary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.followButton.followed{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.followButton:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
