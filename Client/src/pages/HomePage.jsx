@@ -11,17 +11,20 @@ const HomePage = () => {
     return (
         <div className="container">
             <Navbar/>
-            <div className="greeting">
-                Bună ziua, <span>Vasile</span>!
-            </div>
             <div className="heading">
                 <h1>
                     Ce gătim <span>astăzi?</span>
                 </h1>
             </div>
             <div className="searchContainer">
-                <FontAwesomeIcon icon={faSearch} />
-                <input type="text" placeholder="Caută rețete" />
+                <div className="searchBox">
+                    <div className="iconContainer">
+                        <FontAwesomeIcon className="icon" icon={faSearch} />
+
+                    </div>
+                    <input type="text" placeholder="Caută rețete" />
+
+                </div>
                 <div className="filter">
                     <FontAwesomeIcon icon={faSliders} />
                 </div>

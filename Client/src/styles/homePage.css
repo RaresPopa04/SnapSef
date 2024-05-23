@@ -1,8 +1,100 @@
-.container .greeting{
-    display: flex;
-    width: 100%;
-    padding-left: 10px;
+.container .heading{
     margin-top: 50px;
-    font-size: 1.2rem;
-    color: #494949;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+
+}
+
+.container .heading span{
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+.container .searchContainer{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.container .searchContainer .searchBox{
+    box-shadow: 0 0 5px 3px rgba(0,0,0,0.1);
+    background-color: var(--background-color);
+    position: relative;
+    color: black;
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.container .searchContainer .searchBox input{
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 40px;
+    border-radius: 10px;
+
+}
+
+.container .searchContainer .searchBox input:hover{
+    cursor: pointer;
+
+}
+
+.container .searchContainer .iconContainer{
+    color : #333;
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    font-size: 1.5rem;
+    top : 50%;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+
+    transition: all 0.3s ease;
+}
+
+.container .searchContainer .icon{
+   height: 40%;
+}
+
+.container .searchContainer .iconContainer:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.searchContainer .filter{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.container .searchContainer .searchBox input::placeholder{
+    color: #333;
+}
+
+.searchContainer .filter:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
