@@ -5,19 +5,12 @@ import UserImg from "../images/UserImg.svg";
 import RecipeCover from "../components/RecipeCover";
 import ChefCover from "../components/ChefCover";
 import "../styles/homePage.css";
+import Navbar from "../components/Navbar";
 
 const HomePage = () => {
     return (
         <div className="container">
-            <div className="topBar">
-                <div className="profilePicContainer">
-                    <img src={UserImg} alt="" />
-                </div>
-                <div className="rightBar">
-                    <FontAwesomeIcon className="icon" icon={faUser}  />
-                    <FontAwesomeIcon className="icon" icon={faBell} />
-                </div>
-            </div>
+            <Navbar/>
             <div className="greeting">
                 Bună ziua, <span>Vasile</span>!
             </div>
