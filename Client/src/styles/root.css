@@ -6,10 +6,12 @@
     --primary-color: #E45151;
     --secondary-color: #F6CACA;
     --background-color: #F0F0F0;
+    --grey-text: #717171;
 }
 
 
 *{
+    user-select: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

@@ -6,7 +6,7 @@
     flex-direction: row;
     background-color: var(--primary-color);
     color: white;
-    padding: 5px 20px;
+    padding: 0px 20px;
 }
 
 .navBar .logo{
@@ -20,13 +20,20 @@
 }
 
 .navBar .links{
+    font-weight: 500;
     display: flex;
     flex-direction: row;
-    gap:20px;
+    gap:40px;
 }
 .navBar .links> div{
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.navBar .links> div:hover{
+    color: var(--secondary-color);
 }

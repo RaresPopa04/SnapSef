@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles/recipeCover.css";
+import "../styles/components/recipeCover.css";
 import "../styles/root.css"
 import vitaImg from "../images/vita.jpg"
 import chefImg from "../images/chef1.jpeg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookBookmark, faBookmark, faClock, faFire, faStar, faStarAndCrescent } from "@fortawesome/free-solid-svg-icons";
+import { faBookBookmark, faClock, faFire, faStar } from "@fortawesome/free-solid-svg-icons";
 const RecipeCover = (props) => {
     return (
         <div className="recipeCover">

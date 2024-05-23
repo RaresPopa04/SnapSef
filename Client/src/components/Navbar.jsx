@@ -2,7 +2,7 @@ import { faBell, faBookmark, faFire, faHome, faUser, faUtensils } from "@fortawe
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LogoImg from "../images/logo-bar.png"
 import React from "react";
-import "../styles/Navbar.css";
+import "../styles/components/Navbar.css";
 
 const Navbar = () => {
     return (

@@ -1,100 +1,67 @@
-.container .heading{
+.container .heading:nth-child(2){
     margin-top: 50px;
     width: 100%;
     display: flex;
-    align-items: flex-start;
+
     padding-left: 30px;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
-    color: #333;
-
-}
-
-.container .heading span{
-    color: var(--primary-color);
-    display: inline-block;
-}
-
-.container .searchContainer{
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-.container .searchContainer .searchBox{
-    box-shadow: 0 0 5px 3px rgba(0,0,0,0.1);
-    background-color: var(--background-color);
-    position: relative;
     color: black;
-    width: 50%;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 1rem;
-    outline: none;
+    font-weight: 500;
+
 }
 
-.container .searchContainer .searchBox input{
-    background-color: var(--background-color);
+.container .heading div:nth-child(2){
+    color: var(--primary-color);
+    display: block;
+    margin-left: 5px;
+}
+
+
+
+.categories{
+    margin-top: 20px;
+    display: flex;
+    width: auto;
+    padding: 0 10px;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.bestRatedRecipes{
+    margin-top: 50px;
     width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    padding-left: 40px;
-    border-radius: 10px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
 }
 
-.container .searchContainer .searchBox input:hover{
-    cursor: pointer;
-
-}
-
-.container .searchContainer .iconContainer{
-    color : #333;
-    height: 100%;
-    width: 40px;
-    position: absolute;
-    font-size: 1.5rem;
-    top : 50%;
-    left: 0px;
+.bestRatedRecipes .heading{
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-50%);
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
 
-    transition: all 0.3s ease;
+    padding-left: 30px;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: 500;
 }
 
-.container .searchContainer .icon{
-   height: 40%;
-}
-
-.container .searchContainer .iconContainer:hover{
-    cursor: pointer;
+.bestRatedRecipes .heading .icon{
     color: var(--primary-color);
-}
-.searchContainer .filter{
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    display: block;
+    margin-left: 5px;
 }
 
-.container .searchContainer .searchBox input::placeholder{
-    color: #333;
-}
-
-.searchContainer .filter:hover{
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+.bestRatedRecipes{
+    width: 100%;
 }

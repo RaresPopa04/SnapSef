@@ -1,0 +1,81 @@
+.searchContainer{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.searchContainer .searchBox{
+    box-shadow: 0 0 5px 3px rgba(0,0,0,0.1);
+    background-color: var(--background-color);
+    position: relative;
+    color: black;
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.searchContainer .searchBox input{
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 40px;
+    border-radius: 10px;
+
+}
+
+.searchContainer .searchBox input:hover{
+    cursor: pointer;
+
+}
+
+.searchContainer .iconContainer{
+    color : #333;
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    font-size: 1.5rem;
+    top : 50%;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+
+    transition: all 0.3s ease;
+}
+
+.searchContainer .icon{
+   height: 40%;
+}
+
+.searchContainer .iconContainer:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.searchContainer .filter{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.searchContainer .searchBox input::placeholder{
+    color: #333;
+}
+
+.searchContainer .filter:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}

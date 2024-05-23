@@ -1,8 +1,8 @@
 import React from "react";
 import chefImg from "../images/chef1.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAdd, faPeopleGroup, faStar, faThumbsUp, faUserPlus, faUtensils } from "@fortawesome/free-solid-svg-icons";
-import "../styles/chefCover.css";
+import {faPeopleGroup, faStar, faThumbsUp, faUserPlus, faUtensils } from "@fortawesome/free-solid-svg-icons";
+import "../styles/components/chefCover.css";
 const ChefCover = (props) => {
     return (
         <div className = "chefCover">
