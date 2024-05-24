@@ -49,7 +49,7 @@
     display: flex;
 
     padding-left: 30px;
-    font-size: 1.7rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
     color: black;
@@ -64,4 +64,38 @@
 
 .bestRatedRecipes{
     width: 100%;
+}
+
+
+.recipeContainer{
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap:40px;
+}
+
+.recipeContainer .icon{
+    color: var(--grey-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+
+.recipeContainer .icon:hover{
+    color: var(--primary-color);
+}
+
+.recipeList{
+    position: relative;
+    overflow-x: auto;
+    scrollbar-width: none;
+    cursor: pointer;
+}
+
+.recipes{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
 }

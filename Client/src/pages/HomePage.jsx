@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAppleWhole, faCheese, faCookie, faDrumstickBite, faDumbbell, faFire, faFish, faIceCream, faKitchenSet, faMugHot, faPizzaSlice, faSeedling, faUtensils, faWineBottle } from "@fortawesome/free-solid-svg-icons";
+import { faAppleWhole, faArrowLeft, faArrowRight, faCheese, faCookie, faDrumstickBite, faDumbbell, faFire, faFish, faIceCream, faKitchenSet, faMugHot, faPizzaSlice, faSeedling, faUtensils, faWineBottle } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import RecipeCover from "../components/RecipeCover";
 import ChefCover from "../components/ChefCover";
@@ -9,6 +9,17 @@ import SearchBox from "../components/SearchBox";
 import RecipeCategory from "../components/RecipeCategory";
 
 const HomePage = () => {
+    const moveRecipes = (direction) => {
+        console.log("Moving recipes");
+        const recipeList = document.querySelector(".recipeList");
+        const directionValue = direction;
+        console.log(directionValue);
+        recipeList.scrollBy({
+            left: 300 * directionValue,
+            behavior: "smooth"
+        })
+
+    }
     return (
         <div className="container">
             <Navbar/>
@@ -35,11 +46,22 @@ const HomePage = () => {
                     </div>
                     <FontAwesomeIcon className="icon" icon = {faUtensils}/>
                 </div>
-                <div className="recipes">
-                    <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
-                    <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
-                    <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
-            </div>
+                <div className="recipeContainer">
+                    <FontAwesomeIcon className="icon" icon = {faArrowLeft} onClick={()=>moveRecipes(-1)}/>
+                    <div className="recipeList">
+                        <div className="recipes">
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                        </div>
+                    </div>
+                    <FontAwesomeIcon className="icon" icon = {faArrowRight} onClick={()=>moveRecipes(1)}/>
+                </div>
+                
             </div>
             
 
