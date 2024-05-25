@@ -17,7 +17,7 @@
 }
 
 .footer-flex{
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,19 +31,17 @@
 }
 
 .footer-section .linkList{
-    margin-top: 10px;
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:10px;
+    gap:4px;
 }
 
 .footer-section .linkList a{
     color: white;
     font-size: 1.2rem;
-    margin: 10px 0;
 }
 
 .footer-section .linkList a:hover{
@@ -51,13 +49,12 @@
 }
 
 .footer-bottom{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .footer-section a{
     color: white;
     font-size: 1.2rem;
-    margin: 10px 0;
 
 }
 

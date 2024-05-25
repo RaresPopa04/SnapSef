@@ -16,7 +16,18 @@ const HomePage = () => {
         const directionValue = direction;
         console.log(directionValue);
         recipeList.scrollBy({
-            left: 300 * directionValue,
+            left: 600 * directionValue,
+            behavior: "smooth"
+        })
+
+    }
+    const moveNewRecipes = (direction) => {
+        console.log("Moving recipes");
+        const recipeList = document.querySelector(".newRecipes .recipeList");
+        const directionValue = direction;
+        console.log(directionValue);
+        recipeList.scrollBy({
+            left: 600 * directionValue,
             behavior: "smooth"
         })
 
@@ -26,7 +37,7 @@ const HomePage = () => {
         const chefList = document.querySelector(".chefList");
         const directionValue = direction;
         chefList.scrollBy({
-            left: 300 * directionValue,
+            left: 600 * directionValue,
             behavior: "smooth"
         })
     }
@@ -67,13 +78,19 @@ const HomePage = () => {
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                         </div>
                     </div>
                     <FontAwesomeIcon className="icon" icon = {faArrowRight} onClick={()=>moveRecipes(1)}/>
                 </div>
                 
             </div>
-            <div className="bestRatedRecipes scrollableContainer">
+            <div className="newRecipes scrollableContainer">
                 <div className="heading">
                     <div>
                         Rețete noi
@@ -81,7 +98,7 @@ const HomePage = () => {
                     <FontAwesomeIcon className="icon" icon = {faUtensils}/>
                 </div>
                 <div className="recipeContainer">
-                    <FontAwesomeIcon className="icon" icon = {faArrowLeft} onClick={()=>moveRecipes(-1)}/>
+                    <FontAwesomeIcon className="icon" icon = {faArrowLeft} onClick={()=>moveNewRecipes(-1)}/>
                     <div className="list recipeList">
                         <div className="elements">
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
@@ -91,9 +108,13 @@ const HomePage = () => {
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                         </div>
                     </div>
-                    <FontAwesomeIcon className="icon" icon = {faArrowRight} onClick={()=>moveRecipes(1)}/>
+                    <FontAwesomeIcon className="icon" icon = {faArrowRight} onClick={()=>moveNewRecipes(1)}/>
                 </div>
                 
             </div>
@@ -109,6 +130,10 @@ const HomePage = () => {
                     <FontAwesomeIcon className="icon" icon = {faArrowLeft} onClick={()=>moveChefs(-1)}/>
                     <div className="list chefList">
                         <div className="elements">
+                        <ChefCover />
+                        <ChefCover />
+                        <ChefCover />
+                        <ChefCover />
                         <ChefCover />
                         <ChefCover />
                         <ChefCover />
