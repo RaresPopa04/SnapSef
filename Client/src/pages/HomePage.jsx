@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAppleWhole, faArrowLeft, faArrowRight, faCheese, faCookie, faDrumstickBite, faDumbbell, faFire, faFish, faIceCream, faKitchenSet, faMugHot, faPizzaSlice, faSeedling, faUtensils, faWineBottle } from "@fortawesome/free-solid-svg-icons";
+import { faAppleWhole, faArrowLeft, faArrowRight, faCheese, faCookie, faDrumstickBite, faDumbbell, faFire, faFish, faIceCream, faKitchenSet, faMedal, faMugHot, faPizzaSlice, faSeedling, faUtensils, faWineBottle } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import RecipeCover from "../components/RecipeCover";
 import ChefCover from "../components/ChefCover";
@@ -7,6 +7,7 @@ import "../styles/homePage.css";
 import Navbar from "../components/Navbar";
 import SearchBox from "../components/SearchBox";
 import RecipeCategory from "../components/RecipeCategory";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
     const moveRecipes = (direction) => {
@@ -53,6 +54,30 @@ const HomePage = () => {
                     <div>
                         Rețete populare
                     </div>
+                    <FontAwesomeIcon className="icon" icon = {faMedal}/>
+                </div>
+                <div className="recipeContainer">
+                    <FontAwesomeIcon className="icon" icon = {faArrowLeft} onClick={()=>moveRecipes(-1)}/>
+                    <div className="list recipeList">
+                        <div className="elements">
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                            <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                        </div>
+                    </div>
+                    <FontAwesomeIcon className="icon" icon = {faArrowRight} onClick={()=>moveRecipes(1)}/>
+                </div>
+                
+            </div>
+            <div className="bestRatedRecipes scrollableContainer">
+                <div className="heading">
+                    <div>
+                        Rețete noi
+                    </div>
                     <FontAwesomeIcon className="icon" icon = {faUtensils}/>
                 </div>
                 <div className="recipeContainer">
@@ -95,6 +120,8 @@ const HomePage = () => {
                 </div>
                 
             </div>
+
+            <Footer/>
             
         </div>
     );

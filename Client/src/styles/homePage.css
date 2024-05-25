@@ -59,7 +59,7 @@
 .scrollableContainer .heading .icon{
     color: var(--primary-color);
     display: block;
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
 .scrollableContainer{
