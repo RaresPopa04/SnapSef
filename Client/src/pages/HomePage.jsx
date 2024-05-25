@@ -20,6 +20,15 @@ const HomePage = () => {
         })
 
     }
+
+    const moveChefs = (direction) => {
+        const chefList = document.querySelector(".chefList");
+        const directionValue = direction;
+        chefList.scrollBy({
+            left: 300 * directionValue,
+            behavior: "smooth"
+        })
+    }
     return (
         <div className="container">
             <Navbar/>
@@ -39,7 +48,7 @@ const HomePage = () => {
                 <RecipeCategory icon={faPizzaSlice} name="Pizza" />
                 <RecipeCategory icon={faCookie} name="Gustări" />
             </div>
-            <div className="bestRatedRecipes">
+            <div className="bestRatedRecipes scrollableContainer">
                 <div className="heading">
                     <div>
                         Rețete populare
@@ -48,8 +57,8 @@ const HomePage = () => {
                 </div>
                 <div className="recipeContainer">
                     <FontAwesomeIcon className="icon" icon = {faArrowLeft} onClick={()=>moveRecipes(-1)}/>
-                    <div className="recipeList">
-                        <div className="recipes">
+                    <div className="list recipeList">
+                        <div className="elements">
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                             <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
@@ -63,21 +72,30 @@ const HomePage = () => {
                 </div>
                 
             </div>
-            
 
-            <div className="heading">
-                <h1>
-                    Bucătari <span>de top</span>
-                </h1>
-                <FontAwesomeIcon icon = {faKitchenSet}/>
+            <div className="topChefs scrollableContainer">
+                <div className="heading">
+                    <div>
+                        Bucătari <span>de top</span>
+                    </div>
+                    <FontAwesomeIcon className="icon" icon = {faKitchenSet}/>
+                </div>
+                <div className="recipeContainer">
+                    <FontAwesomeIcon className="icon" icon = {faArrowLeft} onClick={()=>moveChefs(-1)}/>
+                    <div className="list chefList">
+                        <div className="elements">
+                        <ChefCover />
+                        <ChefCover />
+                        <ChefCover />
+                        <ChefCover />
+                        <ChefCover />
+                        </div>
+                    </div>
+                    <FontAwesomeIcon className="icon" icon = {faArrowRight} onClick={()=>moveChefs(1)}/>
+                </div>
+                
             </div>
-            <div className="chefs">
-                <ChefCover />
-                <ChefCover />
-                <ChefCover />
-                <ChefCover />
-                <ChefCover />
-            </div>
+            
         </div>
     );
 }

@@ -30,7 +30,7 @@
     justify-content: flex-start;
     align-items: center;
 }
-.bestRatedRecipes{
+.scrollableContainer{
     margin-top: 50px;
     width: 100%;
     display: flex;
@@ -40,7 +40,7 @@
     padding: 0 10px;
 }
 
-.bestRatedRecipes .heading{
+.scrollableContainer .heading{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,45 +56,46 @@
     font-weight: 500;
 }
 
-.bestRatedRecipes .heading .icon{
+.scrollableContainer .heading .icon{
     color: var(--primary-color);
     display: block;
     margin-left: 5px;
 }
 
-.bestRatedRecipes{
+.scrollableContainer{
     width: 100%;
 }
 
 
-.recipeContainer{
+.scrollableContainer .recipeContainer{
     max-width: 100%;
     margin: auto;
     padding: 20px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap:40px;
 }
 
-.recipeContainer .icon{
+.scrollableContainer .recipeContainer .icon{
     color: var(--grey-text);
     font-size: 1.5rem;
     cursor: pointer;
 
 }
 
-.recipeContainer .icon:hover{
+.scrollableContainer .recipeContainer .icon:hover{
     color: var(--primary-color);
 }
 
-.recipeList{
+.scrollableContainer .recipeContainer .list{
     position: relative;
     overflow-x: auto;
     scrollbar-width: none;
     cursor: pointer;
 }
 
-.recipes{
+.scrollableContainer .recipeContainer .list .elements{
     display: flex;
     flex-direction: row;
     gap:20px;
