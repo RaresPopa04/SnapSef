@@ -44,6 +44,7 @@ body{
 }
 
 .recipeDetails .detailsContainer{
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: var(--secondary-color);
@@ -96,6 +97,15 @@ body{
     margin-top: 5px;
 }
 
+.recipeText{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+}
 .recipeText>.title{
     margin-top: 20px;
     font-size: 1.3rem;
@@ -176,4 +186,56 @@ body{
     justify-content: center;
     align-items: center;
     font-weight: 600;
+}
+
+.recipeText .description{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.recipeText .description .title{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.recipeText .description .text{
+    margin-top: 10px;
+    width: 80%;
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.recipeText .ingredients{
+    margin-top: 60px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    font-weight: 500;
+    width: 50%;
+}
+
+.recipeText .ingredients .title{
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 10px;
 }
