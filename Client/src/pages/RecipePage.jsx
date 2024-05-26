@@ -2,6 +2,11 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../components/Footer.jsx";
+import "../styles/RecipePage.css";
+import FoodImg from "../images/vita.jpg"
+import ChefImg from "../images/chef1.jpeg"
+
 
 const RecipePage = () =>{
     return(
@@ -9,7 +14,7 @@ const RecipePage = () =>{
             <Navbar/>
             <div className="recipeDetails">
                 <div className="recipeImg">
-                    <img src="https://via.placeholder.com/150" alt="recipe"/>
+                    <img src={FoodImg}alt="recipe"/>
                 </div>
                 <div className="recipeText">
                     <div className="detailsContainer">
@@ -33,7 +38,7 @@ const RecipePage = () =>{
                         </div>
                         <div className="chef">
                             <div className="chefImg">
-                                <img src="https://via.placeholder.com/50" alt="chef"/>
+                                <img src={ChefImg} alt="chef"/>
                             </div>
                             <div className="chefName">
                                 F. Dumitrescu
@@ -62,6 +67,7 @@ const RecipePage = () =>{
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
