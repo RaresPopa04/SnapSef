@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import StartPage from './pages/StartPage';
 import HomePage from './pages/HomePage';
+import RecipePage from './pages/RecipePage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +13,8 @@ root.render(
     <BrowserRouter>
         <Routes>
           <Route path = "/" element = {<HomePage/>}/>
-          <Route path = "/home" element = {<HomePage/>}/>
+          <Route path = "/acasa" element = {<HomePage/>}/>
+          <Route path = "/retete/:id" element = {<RecipePage/>}/>
         </Routes>
     </BrowserRouter>
 

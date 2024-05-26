@@ -1,5 +1,5 @@
 
-.recipeName{
+.recipeCover .recipeName{
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
@@ -7,7 +7,7 @@
     margin: 10px 0;
 
 }
-.recipeCover{
+.recipeCover .recipeCover{
     position: relative;
     min-width: 250px;
     display: flex;
@@ -15,7 +15,7 @@
     align-items: center;
 
 }
-.recipeImg{
+.recipeCover .recipeImg{
     width: 200px;
     height: 200px;
     margin-bottom: -40px;
@@ -24,31 +24,31 @@
     z-index: 1;
 }
 
-.recipeImg img{
+.recipeCover .recipeImg img{
     width: 100%;
     height: auto;
 }
 
-.chefSection{
+.recipeCover .chefSection{
     width: 70px;
     height: 70px;
     border-radius: 50%;
     overflow: hidden;
 }
 
-.chefSection img{
+.recipeCover .chefSection img{
     height: 100%;
     width: auto;
 
 }
-.lowerPart{
+.recipeCover .lowerPart{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 
 }
-.recipeInfo{
+.recipeCover .recipeInfo{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -57,13 +57,13 @@
     font-size: 1.2rem;
 
 }
-.recipeInfo .info{
+.recipeCover .recipeInfo .info{
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin: 10px 0;
 }
-.recipeDetails{
+.recipeCover .recipeDetails{
     min-width: 100%;
     padding: 10px 20px;
     padding-top: 50px;
@@ -75,7 +75,7 @@
     border-bottom-right-radius: 60px;
 }
 
-.saveButton{
+.recipeCover .saveButton{
     cursor: pointer;
     position: absolute;
     right: 0;
@@ -93,12 +93,12 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.saveButton.bookmarked{
+.recipeCover .saveButton.bookmarked{
     background-color: var(--primary-color);
     color: white;
 }
 
-.saveButton:hover
+.recipeCover .saveButton:hover
 {
     background-color: var(--primary-color);
     color: white;
