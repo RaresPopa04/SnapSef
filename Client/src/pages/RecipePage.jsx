@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faFire, faHand, faPlateWheat, faStar, faStarHalf, faUtensilSpoon, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer.jsx";
 import "../styles/RecipePage.css";
 import FoodImg from "../images/vita.jpg"
@@ -18,10 +18,24 @@ const RecipePage = () =>{
                 </div>
                 <div className="recipeText">
                     <div className="detailsContainer">
-                        <div className="cookTime">
-                            <FontAwesomeIcon icon = {faClock}/>
-                            <div className="cookTimeText">
-                                30 min
+                        <div className="quickInfo">
+                            <div className="cookTime">
+                                <FontAwesomeIcon icon = {faClock}/>
+                                <div className="cookTimeText">
+                                    30 min
+                                </div>
+                            </div>
+                            <div className="difficulty">
+                                <FontAwesomeIcon icon = {faUtensils}/>
+                                <div className="difficultyText">
+                                    Ușor
+                                </div>
+                            </div>
+                            <div className="servings">
+                                <FontAwesomeIcon icon = {faUtensilSpoon}/>
+                                <div className="servingsText">
+                                    4 porții
+                                </div>
                             </div>
                         </div>
                         <div className="rating">
@@ -55,6 +69,46 @@ const RecipePage = () =>{
                         <div className="tag">Sursă de proteină</div>
                         <div className="tag">Cină</div>
                         <div className="tag">Prânz</div>
+                    </div>
+
+                    <div className="valoriNutitionale">
+                        <div className="title">
+                            Valori nutriționale per porție
+                        </div>
+                        <div className="list">
+                            <div className="calories">
+                                <div className="name">
+                                    Calorii
+                                </div>
+                                <div className="value">
+                                    300
+                                </div>
+                            </div>
+                            <div className="protein">
+                                <div className="name">
+                                    Proteine
+                                </div>
+                                <div className="value">
+                                    30
+                                </div>
+                            </div>
+                            <div className="carbs">
+                                <div className="name">
+                                    Carbohidrați
+                                </div>
+                                <div className="value">
+                                    20
+                                </div>
+                            </div>
+                            <div className="fat">
+                                <div className="name">
+                                    Grăsimi
+                                </div>
+                                <div className="value">
+                                    15
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="description">

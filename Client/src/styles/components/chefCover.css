@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-.chefImg{
+.chefCover .chefImg{
     width: 200px;
     height: 200px;
     margin-bottom: -40px;
@@ -16,14 +16,14 @@
     z-index: 1;
 }
 
-.chefImg img{
+.chefCover .chefImg img{
     object-fit:cover;
     object-position: center;
     height: 100%;
     width: 100%;
 }
 
-.chefDetails{
+.chefCover .chefDetails{
     min-width: 250px;
     padding: 30px 20px;
     padding-top: 50px;
@@ -35,7 +35,7 @@
     border-bottom-right-radius: 60px;
 }
 
-.chefName{
+.chefCover .chefName{
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -44,19 +44,19 @@
     margin-bottom: 20px;
 }
 
-.lowerpart{
+.chefCover .lowerpart{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 
 }
 
-.lowerpart .elem{
+.chefCover .lowerpart .elem{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.followButton{
+.chefCover .followButton{
     position: absolute;
     right: 0;
     bottom: 0;
@@ -76,12 +76,12 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-.followButton.followed{
+.chefCover .followButton.followed{
     background-color: var(--primary-color);
     color: white;
 }
 
-.followButton:hover{
+.chefCover .followButton:hover{
     background-color: var(--primary-color);
     color: white;
 }

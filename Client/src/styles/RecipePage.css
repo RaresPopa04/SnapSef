@@ -46,9 +46,134 @@ body{
 .recipeDetails .detailsContainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    color: var(--secondary-color);
 
 }
 
 .recipeDetails .detailsContainer div:nth-child(3){
     grid-area: 1 / 2 / 3 / 3;
+}
+
+.recipeDetails .cookTime, .recipeDetails .difficulty, .recipeDetails .servings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap:10px;
+}
+
+.recipeDetails .rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipeDetails .chef{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recipeDetails .chefImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.recipeDetails .chefImg img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.recipeDetails .chefName{
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.recipeText>.title{
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipeText>.tags{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.recipeText>.tags .tag{
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    padding: 5px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.recipeText>.tags .tag:hover{
+    box-shadow: none;
+}
+
+.recipeText .valoriNutitionale{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.recipeText .valoriNutitionale .title{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.recipeText .valoriNutitionale .list{
+    margin-top: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.recipeText .valoriNutitionale .list div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+
+}
+
+.recipeText .valoriNutitionale .list .name{
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.recipeText .valoriNutitionale .list .value{
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
 }
