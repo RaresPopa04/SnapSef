@@ -25,11 +25,12 @@ const RecipeCover = (props) => {
                     <div className="chefSection">
                         <img src={chefImg} alt="" />
                     </div>
-                    <div className="saveButton">
-                        <FontAwesomeIcon icon = {faBookBookmark} style={{fontSize:'1.3rem'}}/>
-                    </div>
 
                 </div>
+                
+                <div className="saveButton">
+                        <FontAwesomeIcon icon = {faBookBookmark} style={{fontSize:'1.3rem'}}/>
+                    </div>
             </div>
         </div>
     );

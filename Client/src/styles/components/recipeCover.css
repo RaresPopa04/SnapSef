@@ -9,7 +9,8 @@
 }
 .recipeCover{
     position: relative;
-    min-width: 250px;
+    max-width: 300px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +19,7 @@
 .recipeCover .recipeImg{
     width: 200px;
     height: 200px;
-    margin-bottom: -40px;
+    margin-bottom: -100px;
     border-radius: 50%;
     overflow: hidden;
     z-index: 1;
@@ -42,7 +43,9 @@
 
 }
 .recipeCover .lowerPart{
+    width: 80%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;

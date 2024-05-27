@@ -6,6 +6,7 @@ import StartPage from './pages/StartPage';
 import HomePage from './pages/HomePage';
 import RecipePage from './pages/RecipePage';
 import ChefPage from './pages/ChefPage';
+import Test from './pages/test';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +18,7 @@ root.render(
           <Route path = "/acasa" element = {<HomePage/>}/>
           <Route path = "/retete/:id" element = {<RecipePage/>}/>
           <Route path = "/chef/:id" element = {<ChefPage/>}/>
+          <Route path = "/test" element = {<Test/>}/>
 
         </Routes>
     </BrowserRouter>

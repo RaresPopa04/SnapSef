@@ -6,6 +6,7 @@ import RecipeCover from "../components/RecipeCover";
 import "../styles/ChefPage.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SearchBox from "../components/SearchBox";
 
 const ChefPage = () => {
     return (
@@ -80,8 +81,13 @@ const ChefPage = () => {
                 <div className="title">
                     Rețetele mele
                 </div>
+                <SearchBox/>
                 <div className="recipeContainer">
                     
+                    <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                    <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                    <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
+                    <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                     <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                     <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />
                     <RecipeCover nume = "Steak de vită cu cartofi prăjiți" rating = "4.6" timp = "40" calorii = "700" />

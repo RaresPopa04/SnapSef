@@ -145,6 +145,7 @@
 }
 
 .recipes .recipeContainer{
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
