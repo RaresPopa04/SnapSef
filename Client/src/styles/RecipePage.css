@@ -47,7 +47,8 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    color: var(--secondary-color);
+    color: white;
+    margin-bottom: 10px;
 
 }
 
