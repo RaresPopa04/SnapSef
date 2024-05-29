@@ -5,7 +5,7 @@ import React from "react";
 import "../styles/components/Navbar.css";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
     const navigate = useNavigate();
 
     const goTo = (route)=>{
@@ -13,10 +13,10 @@ const Navbar = () => {
     }
     return (
         <div className = "navBar">
-            <div className="logo">
+           <div className="logo" style={{textAlign: props.login ? "center" : "left"}}>
                 <img src={LogoImg}/>
             </div>
-            <div className="links">
+            {props.login == null && <div className="links">
                 <div className="home" onClick={()=>goTo("/")}>
                     <FontAwesomeIcon icon = {faHome}/>
                     Acasă
@@ -37,7 +37,7 @@ const Navbar = () => {
                     <FontAwesomeIcon icon = {faUser}/>
                     Profil
                 </div>
-            </div>
+            </div>}
         </div>
     );
 };

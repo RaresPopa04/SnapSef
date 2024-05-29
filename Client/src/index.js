@@ -8,6 +8,7 @@ import RecipePage from './pages/RecipePage';
 import ChefPage from './pages/ChefPage';
 import Test from './pages/test';
 import SavedRecipes from './pages/SavedRecipes';
+import Login from './pages/Login';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,7 @@ root.render(
     <BrowserRouter>
         <Routes>
           <Route path = "/" element = {<HomePage/>}/>
+          <Route path = "/login" element = {<Login/>}/>
           <Route path = "/retete/:id" element = {<RecipePage/>}/>
           <Route path = "/chef/:id" element = {<ChefPage/>}/>
           <Route path='/calorii' element = {<h1>Calorii</h1>}/>

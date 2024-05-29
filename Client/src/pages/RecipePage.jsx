@@ -10,7 +10,7 @@ import ChefImg from "../images/chef1.jpeg"
 
 const RecipePage = () =>{
     return(
-        <div className="container">
+        <div className="container recipePage">
             <Navbar/>
             <div className="recipeDetails">
                 <div className="recipeImg">
