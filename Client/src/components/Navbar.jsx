@@ -33,9 +33,9 @@ const Navbar = () => {
                     <FontAwesomeIcon icon = {faFire}/>
                     Calorii
                 </div>
-                <div className="notifications">
-                    <FontAwesomeIcon icon = {faBell}/>
-                    Notificări
+                <div className="profile">
+                    <FontAwesomeIcon icon = {faUser}/>
+                    Profil
                 </div>
             </div>
         </div>
