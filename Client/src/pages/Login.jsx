@@ -13,7 +13,7 @@ const Login = ()=>{
                     <input type="password" placeholder="Parolă"/>
                     <button>Logare</button>
                     <div className="register">
-                        <p>Nu ai cont? <a href="/register">Înregistrează-te</a></p>
+                        <p>Nu ai cont? <a href="/signup">Înregistrează-te</a></p>
                     </div>
                 </div>
             </div>
