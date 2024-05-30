@@ -3,7 +3,7 @@ import { faAppleWhole, faArrowLeft, faArrowRight, faCheese, faCookie, faDrumstic
 import React from "react";
 import RecipeCover from "../components/RecipeCover";
 import ChefCover from "../components/ChefCover";
-import "../styles/homePage.css";
+import "../styles/pages/homePage.css";
 import Navbar from "../components/Navbar";
 import SearchBox from "../components/SearchBox";
 import RecipeCategory from "../components/RecipeCategory";

@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import SearchBox from "../components/SearchBox";
 import RecipeCover from "../components/RecipeCover";
-import "../styles/SavedRecipes.css";
+import "../styles/pages/SavedRecipes.css";
 
 const SavedRecipes = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/startPage.css"
+import "../styles/pages/startPage.css"
 import { useNavigate } from 'react-router-dom';
 import logo from "../images/logo.png"
 

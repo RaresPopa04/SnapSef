@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faFire, faHand, faPlateWheat, faStar, faStarHalf, faUtensilSpoon, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer.jsx";
-import "../styles/RecipePage.css";
+import "../styles/pages/RecipePage.css";
 import FoodImg from "../images/vita.jpg"
 import ChefImg from "../images/chef1.jpeg"
 

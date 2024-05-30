@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import ChefImg from "../images/chef1.jpeg";
 import RecipeCover from "../components/RecipeCover";
-import "../styles/ChefPage.css";
+import "../styles/pages/ChefPage.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SearchBox from "../components/SearchBox";

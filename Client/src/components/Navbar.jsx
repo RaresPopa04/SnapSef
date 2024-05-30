@@ -13,7 +13,7 @@ const Navbar = (props) => {
     }
     return (
         <div className = "navBar">
-           <div className="logo" style={{textAlign: props.login ? "center" : "left"}}>
+           <div className="logo" style={{textAlign: props.login ? "center" : "left"}} onClick={()=>goTo("/")}>
                 <img src={LogoImg}/>
             </div>
             {props.login == null && <div className="links">
