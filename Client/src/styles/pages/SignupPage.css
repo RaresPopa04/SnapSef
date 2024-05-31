@@ -27,7 +27,7 @@
     border-radius: 5px;
 }
 
-.signupForm button{
+.signupForm input[type="submit"]{
     margin-top: 30px;
     width: 100%;
     padding: 10px;
@@ -42,7 +42,7 @@
     transition: box-shadow 0.3s;
 }
 
-.signupForm button:hover{
+.signupForm input[type="submit"]:hover{
     box-shadow: none;
 }
 

@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
+const authMiddleWare = require("../includes/verifyPermission");
+dotenv.config();
 
 router.post("/signup",async (req,res)=>{
 
@@ -16,9 +20,10 @@ router.post("/signup",async (req,res)=>{
     })
 
     newUser.save().then(()=>{
-        res.json("User saved");
+        const token = jwt.sign({username:newUser.username,email:newUser.email},process.env.JWT_SECRET,{expiresIn:"1h"});
+        res.status(201).json({token});
     }).catch((err)=>{
-        res.json(err);
+        res.status(400).json({error:err.message});
     })
 
 })
@@ -27,18 +32,23 @@ router.post("/login",async (req,res)=>{
     const userDetails = req.body;
     const user = await User.findOne({email:userDetails.email})
     if(!user){
-        res.json("User not found");
+        res.json({error:"User not found"});
     }
     else{
         const password =await bcrypt.compare(userDetails.password,user.password);
         if(!password){
-            res.json("Password incorrect");
+            res.json({error:"Password is incorrect"});
         }else{
             let userWithoutPassword = user.toObject()
             delete userWithoutPassword.password;
-            res.json(userWithoutPassword);
+            const token = jwt.sign({username:user.username,email:user.email},process.env.JWT_SECRET,{expiresIn:"1h"})
+            res.json({token});
         }
     }
+})
+
+router.get("/profile",authMiddleWare,async (req,res)=>{
+    res.json({message:`You are authorized ${req.user.username}`});
 })
 
 module.exports = router;
