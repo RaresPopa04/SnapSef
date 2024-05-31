@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/pages/SignupPage.css";
 import axios from "axios";
 
 const Signup = () => {
-
     const [formData, setFormData] = useState({
         username: "",
         lastName: "",
@@ -19,7 +18,9 @@ const Signup = () => {
         e.preventDefault();
         console.log(formData)
         axios.post("/profile/signup",formData).then((res)=>{
-            console.log(res);
+            localStorage.setItem("token",res.data.token);
+            localStorage.setItem("username",JSON.stringify(formData.username));
+            window.location.href = "/";
         }).catch((err)=>{
             console.log(err);
         })

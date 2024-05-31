@@ -1,7 +1,7 @@
 import { faBell, faBookmark, faFire, faHome, faUser, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LogoImg from "../images/logo-bar.png"
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/components/Navbar.css";
 import { useNavigate } from "react-router-dom";
 
@@ -11,6 +11,9 @@ const Navbar = (props) => {
     const goTo = (route)=>{
         navigate(route);
     }
+
+
+
     return (
         <div className = "navBar">
            <div className="logo" style={{textAlign: props.login ? "center" : "left"}} onClick={()=>goTo("/")}>
@@ -33,7 +36,7 @@ const Navbar = (props) => {
                     <FontAwesomeIcon icon = {faFire}/>
                     Calorii
                 </div>
-                <div className="profile">
+                <div className="profile" onClick={()=>goTo("/profil")}>
                     <FontAwesomeIcon icon = {faUser}/>
                     Profil
                 </div>

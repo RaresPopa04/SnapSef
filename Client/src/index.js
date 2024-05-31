@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import StartPage from './pages/StartPage';
 import HomePage from './pages/HomePage';
 import RecipePage from './pages/RecipePage';
 import ChefPage from './pages/ChefPage';
@@ -10,6 +9,7 @@ import Test from './pages/test';
 import SavedRecipes from './pages/SavedRecipes';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Profil from './pages/Profil';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,6 +26,7 @@ root.render(
           <Route path='/salvate' element = {<SavedRecipes/>}/>
           <Route path='/signup' element = {<Signup/>}/>
           <Route path = "/test" element = {<Test/>}/>
+          <Route path = "/profil" element = {<Profil/>}/>
 
         </Routes>
     </BrowserRouter>
