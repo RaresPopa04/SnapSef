@@ -23,6 +23,7 @@ router.post("/signup",async (req,res)=>{
         const token = jwt.sign({username:newUser.username,email:newUser.email},process.env.JWT_SECRET,{expiresIn:"1h"});
         res.status(201).json({token});
     }).catch((err)=>{
+        console.log(err);
         res.status(400).json({error:err.message});
     })
 
@@ -31,18 +32,19 @@ router.post("/signup",async (req,res)=>{
 router.post("/login",async (req,res)=>{
     const userDetails = req.body;
     const user = await User.findOne({email:userDetails.email})
+    console.log(userDetails.email);
     if(!user){
-        res.json({error:"User not found"});
+        res.status(400).json({error:"User not found"});
     }
     else{
         const password =await bcrypt.compare(userDetails.password,user.password);
         if(!password){
-            res.json({error:"Password is incorrect"});
+            res.status(400).json({error:"Password is incorrect"});
         }else{
             let userWithoutPassword = user.toObject()
             delete userWithoutPassword.password;
             const token = jwt.sign({username:user.username,email:user.email},process.env.JWT_SECRET,{expiresIn:"1h"})
-            res.json({token});
+            res.status(200).json({token});
         }
     }
 })

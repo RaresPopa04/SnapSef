@@ -1,17 +1,24 @@
 import { faBell, faBookmark, faFire, faHome, faUser, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LogoImg from "../images/logo-bar.png"
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/components/Navbar.css";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = (props) => {
     const navigate = useNavigate();
-
+    const [username,setUsername] = useState("");
     const goTo = (route)=>{
         navigate(route);
     }
 
+
+    useEffect(()=>{
+        const username = localStorage.getItem("username");
+        console.log(localStorage);
+        if(username)
+            setUsername(username);
+    },[])
 
 
     return (
@@ -36,10 +43,20 @@ const Navbar = (props) => {
                     <FontAwesomeIcon icon = {faFire}/>
                     Calorii
                 </div>
-                <div className="profile" onClick={()=>goTo("/profil")}>
-                    <FontAwesomeIcon icon = {faUser}/>
-                    Profil
-                </div>
+                {
+                    username == "" && <div className="login" onClick={()=>goTo("/login")}>
+                        <FontAwesomeIcon icon = {faUser}/>
+                        Login
+                    </div>
+                }
+                {
+
+                    username != "" && <div className="profile" onClick={()=>goTo("/profil")}>
+                        <FontAwesomeIcon icon = {faUser}/>
+                        Profil
+                    </div>
+                
+                }
             </div>}
         </div>
     );
