@@ -17,16 +17,29 @@ const Signup = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        console.log(formData)
+        if(formData.password !== formData.password1){
+            setError("Parolele nu coincid");
+            return;
+        }
+
+        if(formData.username === "" || formData.lastName === "" || formData.firstName === "" || formData.email === "" || formData.password === "" || formData.password1 === ""){
+            setError("Toate campurile sunt obligatorii");
+            return;
+        }
+
         axios.post("/profile/signup",formData).then((res)=>{
             localStorage.setItem("token",res.data.token);
             localStorage.setItem("username",JSON.stringify(formData.username));
             window.location.href = "/";
         }).catch((err)=>{
-            if(err.response.status === 400){
-                setError(err.response.data.error);
+            if(err === undefined){
+                setError("Eroare la server");
                 console.log(error)
+            }else{
+                setError(err.response.data.error);
             }
+
+
         })
     }
 
@@ -45,6 +58,9 @@ const Signup = () => {
             <div className="signupPage">
                 <form className="signupForm" onSubmit={handleSubmit}>
                     <h1>Înregistrare</h1>
+                    {
+                        error!=="" && <div className="errorContainer">{error}</div>
+                    }
                     <input onChange={handleChange} value = {formData.username} name ="username" type="text" placeholder="Username"/>
                     <input onChange={handleChange} value = {formData.lastName} name ="lastName" type="text" placeholder="Nume"/>
                     <input onChange={handleChange} value = {formData.firstName} name ="firstName" type="text" placeholder="Prenume"/>

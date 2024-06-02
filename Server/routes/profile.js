@@ -24,7 +24,7 @@ router.post("/signup",async (req,res)=>{
         res.status(201).json({token});
     }).catch((err)=>{
         if(err.code === 11000){
-            res.status(400).json({error:"Email already exists"});
+            res.status(400).json({error:"Mai exista un utilizator cu acest email"});
         }else{
             res.status(500).json({error:"Eroare la server"});
         }
@@ -34,15 +34,15 @@ router.post("/signup",async (req,res)=>{
 
 router.post("/login",async (req,res)=>{
     const userDetails = req.body;
+    
     const user = await User.findOne({email:userDetails.email})
-    console.log(userDetails.email);
     if(!user){
-        res.status(400).json({error:"User not found"});
+        res.status(400).json({error:"Nu exista un utilizator"});
     }
     else{
         const password =await bcrypt.compare(userDetails.password,user.password);
         if(!password){
-            res.status(400).json({error:"Password is incorrect"});
+            res.status(400).json({error:"Parola incorecta"});
         }else{
             let userWithoutPassword = user.toObject()
             delete userWithoutPassword.password;

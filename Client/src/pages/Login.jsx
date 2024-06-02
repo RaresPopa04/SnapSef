@@ -23,14 +23,22 @@ const Login = ()=>{
 
     const handleSubmit = (e)=>{
         e.preventDefault();
+
+        if(formData.email === "" || formData.password === ""){
+            setError("Toate campurile sunt obligatorii");
+            return;
+        }
+
         axios.post("/profile/login",formData).then((res)=>{
             localStorage.setItem("token",res.data.token);
             localStorage.setItem("username",formData.username);
             window.location.href = "/";
         }).catch((err)=>{
-            if(err.code === 500){
+            if(err === undefined){
                 setError("Eroare la server");
-                console.log(err);
+                console.log(error)
+            }else{
+                setError(err.response.data.error);
             }
         })
     }
