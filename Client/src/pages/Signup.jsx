@@ -4,6 +4,7 @@ import "../styles/pages/SignupPage.css";
 import axios from "axios";
 
 const Signup = () => {
+    const [error,setError] = useState("");
     const [formData, setFormData] = useState({
         username: "",
         lastName: "",
@@ -22,7 +23,10 @@ const Signup = () => {
             localStorage.setItem("username",JSON.stringify(formData.username));
             window.location.href = "/";
         }).catch((err)=>{
-            console.log(err);
+            if(err.response.status === 400){
+                setError(err.response.data.error);
+                console.log(error)
+            }
         })
     }
 

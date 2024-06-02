@@ -23,8 +23,11 @@ router.post("/signup",async (req,res)=>{
         const token = jwt.sign({username:newUser.username,email:newUser.email},process.env.JWT_SECRET,{expiresIn:"1h"});
         res.status(201).json({token});
     }).catch((err)=>{
-        console.log(err);
-        res.status(400).json({error:err.message});
+        if(err.code === 11000){
+            res.status(400).json({error:"Email already exists"});
+        }else{
+            res.status(500).json({error:"Eroare la server"});
+        }
     })
 
 })

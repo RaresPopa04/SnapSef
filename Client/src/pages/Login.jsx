@@ -5,7 +5,7 @@ import axios from "axios";
 
 const Login = ()=>{
 
-    
+    const [error,setError] = useState("");
     const [formData, setFormData] = useState({
         username: "",
         email: "",
@@ -28,7 +28,10 @@ const Login = ()=>{
             localStorage.setItem("username",formData.username);
             window.location.href = "/";
         }).catch((err)=>{
-            console.log(err);
+            if(err.code === 500){
+                setError("Eroare la server");
+                console.log(err);
+            }
         })
     }
 
@@ -38,6 +41,9 @@ const Login = ()=>{
             <div className="loginPage">
                 <form className="loginForm" onSubmit={handleSubmit}>
                     <h1>Logare</h1>
+                    {
+                        error!=="" && <div className="errorContainer">{error}</div>
+                    }
                     <input type="text" onChange={handleChange} value  = {formData.email} name = "email" placeholder="Email"/>
                     <input type="password" onChange = {handleChange} value  = {formData.password} name = "password" placeholder="Parolă"/>
                     <input type = "submit" value = "Logare"/>
