@@ -23,6 +23,7 @@ router.post("/signup",async (req,res)=>{
         const token = jwt.sign({username:newUser.username,email:newUser.email},process.env.JWT_SECRET,{expiresIn:"1h"});
         res.status(201).json({token});
     }).catch((err)=>{
+        console.log(err);
         if(err.code === 11000){
             res.status(400).json({error:"Mai exista un utilizator cu acest email"});
         }else{
@@ -47,7 +48,13 @@ router.post("/login",async (req,res)=>{
             let userWithoutPassword = user.toObject()
             delete userWithoutPassword.password;
             const token = jwt.sign({username:user.username,email:user.email},process.env.JWT_SECRET,{expiresIn:"1h"})
-            res.status(200).json({token});
+            res.cookie("token",token,{
+                httpOnly:true,
+                secure:true,
+                sameSite:"Strict",
+                maxAge:3600000
+            });
+            res.sendStatus(200);
         }
     }
 })

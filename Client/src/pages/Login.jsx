@@ -29,7 +29,7 @@ const Login = ()=>{
             return;
         }
 
-        axios.post("/profile/login",formData).then((res)=>{
+        axios.post("/profile/login",formData,{withCredentials:true}).then((res)=>{
             localStorage.setItem("token",res.data.token);
             localStorage.setItem("username",formData.username);
             window.location.href = "/";
