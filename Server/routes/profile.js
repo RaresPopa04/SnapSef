@@ -31,6 +31,7 @@ router.post("/signup",async (req,res)=>{
     }).catch((err)=>{
         console.log(err);
         if(err.code === 11000){
+            // important to know that the error object has a key called keyValue that contains the key that is duplicated
             const key = Object.keys(err.keyValue)[0];
             res.status(400).json({error:`Mai exista un utilizator cu acest ${key}`});
         }else{
