@@ -24,7 +24,6 @@ router.post("/signup",async (req,res)=>{
         res.cookie("token",token,{
             httpOnly:true,
             secure:true,
-            sameSite:"Strict",
             maxAge:3600000
         });
         res.sendStatus(200);
@@ -45,9 +44,11 @@ router.post("/login",async (req,res)=>{
     const userDetails = req.body;
     
     const user = await User.findOne({username:userDetails.username})
+    console.log(user);
     if(!user){
         res.status(400).json({error:"Nu exista un utilizator"});
     }
+
     else{
         const password =await bcrypt.compare(userDetails.password,user.password);
         if(!password){
@@ -59,7 +60,6 @@ router.post("/login",async (req,res)=>{
             res.cookie("token",token,{
                 httpOnly:true,
                 secure:true,
-                sameSite:"Strict",
                 maxAge:3600000
             });
             res.sendStatus(200);
