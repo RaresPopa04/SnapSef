@@ -21,11 +21,18 @@ router.post("/signup",async (req,res)=>{
 
     newUser.save().then(()=>{
         const token = jwt.sign({username:newUser.username,email:newUser.email},process.env.JWT_SECRET,{expiresIn:"1h"});
-        res.status(201).json({token});
+        res.cookie("token",token,{
+            httpOnly:true,
+            secure:true,
+            sameSite:"Strict",
+            maxAge:3600000
+        });
+        res.sendStatus(200);
     }).catch((err)=>{
         console.log(err);
         if(err.code === 11000){
-            res.status(400).json({error:"Mai exista un utilizator cu acest email"});
+            const key = Object.keys(err.keyValue)[0];
+            res.status(400).json({error:`Mai exista un utilizator cu acest ${key}`});
         }else{
             res.status(500).json({error:"Eroare la server"});
         }
@@ -36,7 +43,7 @@ router.post("/signup",async (req,res)=>{
 router.post("/login",async (req,res)=>{
     const userDetails = req.body;
     
-    const user = await User.findOne({email:userDetails.email})
+    const user = await User.findOne({username:userDetails.username})
     if(!user){
         res.status(400).json({error:"Nu exista un utilizator"});
     }

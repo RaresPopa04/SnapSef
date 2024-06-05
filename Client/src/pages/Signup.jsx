@@ -28,8 +28,7 @@ const Signup = () => {
         }
 
         axios.post("/profile/signup",formData).then((res)=>{
-            localStorage.setItem("token",res.data.token);
-            localStorage.setItem("username",JSON.stringify(formData.username));
+            localStorage.setItem("username",formData.username);
             window.location.href = "/";
         }).catch((err)=>{
             if(err === undefined){
