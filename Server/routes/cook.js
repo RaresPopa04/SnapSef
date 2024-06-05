@@ -20,7 +20,8 @@ router.post("/signup",async (req,res)=>{
         const token = jwt.sign(
             {
                 username:cook.username,
-                email:cook.email
+                email:cook.email,
+                cook:true,
             }, 
             process.env.JWT_SECRET, 
             {expiresIn:"1h"});
@@ -36,7 +37,12 @@ router.post("/signup",async (req,res)=>{
         res.sendStatus(200)
     }).catch((error)=>{
         console.log(error);
-        res.status(400).send("Eroare la server");
+        if(error.code === 11000){
+            const key = Object.keys(error.keyValue)[0];
+            res.status(400).json({error:`Mai exista un utilizator cu acest ${key}`});
+        }else{
+            res.status(500).json({error:"Eroare la server"});
+        }
     })
 })
 
@@ -46,32 +52,38 @@ router.post("/login",async (req,res)=>{
 
     const cookFound =await  Cook.findOne({username:cook.username});
     if(!cookFound) res.status(400).send("Bucatarul nu a fost gasit");
-    const insertedPassword = cook.password;
-    const comparePassword = await bcrypt.compare(insertedPassword,cookFound.password);
-    if(!comparePassword){
-        res.status(400).send("Parola gresita");
-    }else{
-        const token = jwt.sign(
-            {
-                username:cook.username,
-                email:cook.email
-            },
-            process.env.JWT_SECRET,
-            {
-                expiresIn:"1h"
-            }
-        )
-        res.cookie("token",token,
-            {
-                httpOnly:true,
-                secure:true,
-                maxAge:3600000
-            }
-        )
+    else{
+        const insertedPassword = cook.password;
+        const comparePassword = await bcrypt.compare(insertedPassword,cookFound.password);
+        if(!comparePassword){
+            res.status(400).send("Parola gresita");
+        }else{
+            const token = jwt.sign(
+                {
+                    username:cook.username,
+                    email:cook.email,
+                    cook:true,
+                },
+                process.env.JWT_SECRET,
+                {
+                    expiresIn:"1h"
+                }
+            )
+            res.cookie("token",token,
+                {
+                    httpOnly:true,
+                    secure:true,
+                    maxAge:3600000
+                }
+            )
+    
+            res.sendStatus(200)
+        }
 
-        res.sendStatus(200)
     }
+    
 
 })
+
 
 module.exports = router;
