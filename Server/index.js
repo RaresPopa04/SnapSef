@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
-const profile = require("./routes/profile");
+const profileRoute = require("./routes/profile");
 const connectDb = require("./config/connectDb");
+const cookRoute = require("./routes/cook");
 
 connectDb();
 app.use(express.json());
-app.use("/profile",profile);
+app.use("/profile",profileRoute);
+app.use("/cook",cookRoute)
 
 app.get("/",(req,res)=>{
     res.send("Hello World");
