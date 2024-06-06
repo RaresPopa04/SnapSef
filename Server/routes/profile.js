@@ -4,7 +4,7 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
-const authMiddleWare = require("../includes/verifyPermission");
+const {authMiddleWare} = require("../includes/verifyPermission");
 dotenv.config();
 
 router.post("/signup",async (req,res)=>{

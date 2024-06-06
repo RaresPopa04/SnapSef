@@ -34,14 +34,14 @@ router.post("/signup",async (req,res)=>{
 
             }
         )
-        res.sendStatus(200)
+        return res.sendStatus(200)
     }).catch((error)=>{
         console.log(error);
         if(error.code === 11000){
             const key = Object.keys(error.keyValue)[0];
-            res.status(400).json({error:`Mai exista un utilizator cu acest ${key}`});
+            return res.status(400).json({error:`Mai exista un utilizator cu acest ${key}`});
         }else{
-            res.status(500).json({error:"Eroare la server"});
+            return res.status(500).json({error:"Eroare la server"});
         }
     })
 })
@@ -51,12 +51,12 @@ router.post("/login",async (req,res)=>{
     const cook = req.body;
 
     const cookFound =await  Cook.findOne({username:cook.username});
-    if(!cookFound) res.status(400).send("Bucatarul nu a fost gasit");
+    if(!cookFound) return res.status(400).send("Bucatarul nu a fost gasit");
     else{
         const insertedPassword = cook.password;
         const comparePassword = await bcrypt.compare(insertedPassword,cookFound.password);
         if(!comparePassword){
-            res.status(400).send("Parola gresita");
+           return res.status(400).send("Parola gresita");
         }else{
             const token = jwt.sign(
                 {
@@ -77,7 +77,7 @@ router.post("/login",async (req,res)=>{
                 }
             )
     
-            res.sendStatus(200)
+            return res.sendStatus(200)
         }
 
     }
