@@ -10,6 +10,7 @@ import SavedRecipes from './pages/SavedRecipes';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profil from './pages/Profil';
+import AllRecipes from './pages/AllRecipes';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -27,6 +28,7 @@ root.render(
           <Route path='/signup' element = {<Signup/>}/>
           <Route path = "/test" element = {<Test/>}/>
           <Route path = "/profil" element = {<Profil/>}/>
+          <Route path = "/retete" element={<AllRecipes/>}></Route>
 
         </Routes>
     </BrowserRouter>

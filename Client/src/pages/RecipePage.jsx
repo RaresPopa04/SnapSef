@@ -5,7 +5,6 @@ import { faClock, faFire, faHand, faPlateWheat, faStar, faStarHalf, faUtensilSpo
 import Footer from "../components/Footer.jsx";
 import "../styles/pages/RecipePage.css";
 import FoodImg from "../images/vita.jpg"
-import ChefImg from "../images/chef1.jpeg"
 
 
 const RecipePage = () =>{
@@ -52,7 +51,7 @@ const RecipePage = () =>{
                         </div>
                         <div className="chef">
                             <div className="chefImg">
-                                <img src={ChefImg} alt="chef"/>
+                                <img src="images/chef1.jpeg" alt="chef"/>
                             </div>
                             <div className="chefName">
                                 F. Dumitrescu

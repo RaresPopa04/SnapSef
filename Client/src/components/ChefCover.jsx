@@ -1,5 +1,4 @@
 import React from "react";
-import chefImg from "../images/chef1.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faPeopleGroup, faStar, faThumbsUp, faUserPlus, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import "../styles/components/chefCover.css";
@@ -7,7 +6,7 @@ const ChefCover = (props) => {
     return (
         <div className = "chefCover">
             <div className = "chefImg">
-                <img src = {chefImg} alt = "" />
+                <img src = "images/chef1.jpeg" alt = "" />
             </div>
             <div className="chefDetails">
             <div className="chefName">F. Dumitrescu</div>

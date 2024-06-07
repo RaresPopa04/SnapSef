@@ -1,6 +1,5 @@
 import { faBell, faBookmark, faFire, faHome, faUser, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LogoImg from "../images/logo-bar.png"
 import React, { useEffect, useState } from "react";
 import "../styles/components/Navbar.css";
 import { useNavigate } from "react-router-dom";
@@ -24,7 +23,7 @@ const Navbar = (props) => {
     return (
         <div className = "navBar">
            <div className="logo" style={{textAlign: props.login ? "center" : "left"}} onClick={()=>goTo("/")}>
-                <img src={LogoImg}/>
+                <img src="images/logo-bar.png"/>
             </div>
             {props.login == null && <div className="links">
                 <div className="home" onClick={()=>goTo("/")}>

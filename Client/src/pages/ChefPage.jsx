@@ -1,7 +1,6 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import ChefImg from "../images/chef1.jpeg";
 import RecipeCover from "../components/RecipeCover";
 import "../styles/pages/ChefPage.css";
 import Navbar from "../components/Navbar";
@@ -18,7 +17,7 @@ const ChefPage = () => {
             <div className="topInfo">
                 <div className="left">
                     <div className="chefImg">
-                        <img src={ChefImg} alt="chef"/>
+                        <img src="images/chef1.jpeg" alt="chef"/>
                     </div>
                 </div>
                 <div className="right">
