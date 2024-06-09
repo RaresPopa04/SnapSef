@@ -74,7 +74,7 @@ const AllRecipes = () => {
                 </div>
 
                 <div className="moreButton">
-                    <button>Mai multe ...</button>
+                    <div>Mai multe ...</div>
                 </div>
 
             </div>
@@ -86,13 +86,64 @@ const AllRecipes = () => {
                     </div>
                     <FontAwesomeIcon icon ={faCookie} className="icon"/>
                 </div>
-                <div className="recipes">
-                    <RecipeSimple recipe={
-                        {
-                            title:"Banana Bread",
-                            chefName:"Florin Dumitrescu"
-                        }
-                    }/>
+                <div className="scrollableContainer">
+                    <div className="recipeContainer">
+                        <div className="recipes horizontalContainer">
+                            <div className="elements">
+                                <RecipeSimple recipe={
+                                    {
+                                        title:"Banana Bread",
+                                        chefName:"Florin Dumitrescu"
+                                    }
+                                }/>
+                                <RecipeSimple recipe={
+                                    {
+                                        title:"Banana Bread",
+                                        chefName:"Florin Dumitrescu"
+                                    }
+                                }/>
+                                <RecipeSimple recipe={
+                                    {
+                                        title:"Banana Bread",
+                                        chefName:"Florin Dumitrescu"
+                                    }
+                                }/>
+                                <RecipeSimple recipe={
+                                    {
+                                        title:"Banana Bread",
+                                        chefName:"Florin Dumitrescu"
+                                    }
+                                }/>
+                                <RecipeSimple recipe={
+                                    {
+                                        title:"Banana Bread",
+                                        chefName:"Florin Dumitrescu"
+                                    }
+                                }/>
+                                <RecipeSimple recipe={
+                                    {
+                                        title:"Banana Bread",
+                                        chefName:"Florin Dumitrescu"
+                                    }
+                                }/>
+                                <RecipeSimple recipe={
+                                    {
+                                        title:"Banana Bread",
+                                        chefName:"Florin Dumitrescu"
+                                    }
+                                }/>
+                                <RecipeSimple recipe={
+                                    {
+                                        title:"Banana Bread",
+                                        chefName:"Florin Dumitrescu"
+                                    }
+                                }/>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                   
                 </div>
             </div>
 
