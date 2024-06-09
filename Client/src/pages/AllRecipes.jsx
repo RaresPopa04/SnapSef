@@ -47,6 +47,34 @@ const AllRecipes = () => {
                             chefName:"Florin Dumitrescu"
                         }
                     }/>
+                    <RecipeSimple recipe={
+                        {
+                            title:"Banana Bread",
+                            chefName:"Florin Dumitrescu"
+                        }
+                    }/>
+                    <RecipeSimple recipe={
+                        {
+                            title:"Banana Bread",
+                            chefName:"Florin Dumitrescu"
+                        }
+                    }/>
+                    <RecipeSimple recipe={
+                        {
+                            title:"Banana Bread",
+                            chefName:"Florin Dumitrescu"
+                        }
+                    }/>
+                    <RecipeSimple recipe={
+                        {
+                            title:"Banana Bread",
+                            chefName:"Florin Dumitrescu"
+                        }
+                    }/>
+                </div>
+
+                <div className="moreButton">
+                    <button>Mai multe ...</button>
                 </div>
 
             </div>
