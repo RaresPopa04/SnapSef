@@ -38,3 +38,76 @@
     font-size: 2.5rem;
     color: var(--primary-color);
 }
+
+.relatedRecipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 60px;
+  flex-direction: column;
+
+}
+
+.relatedRecipes .titleContainer {
+  display: flex;
+  justify-content: center;
+    align-items: center;
+  margin-bottom: 20px;
+}
+
+.relatedRecipes .titleContainer .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.relatedRecipes .titleContainer .title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  margin-top: 5px;
+}
+
+.relatedRecipes .titleContainer .icon{
+    margin-left: 10px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.moreRecipes {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  flex-direction: column;
+}
+
+.moreRecipes .titleContainer {
+  display: flex;
+  justify-content: center;
+    align-items: center;
+  margin-bottom: 20px;
+}
+
+.moreRecipes .titleContainer .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.moreRecipes .titleContainer .title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  margin-top: 5px;
+}
+
+.moreRecipes .titleContainer .icon{
+    margin-left: 10px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+

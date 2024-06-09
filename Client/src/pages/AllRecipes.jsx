@@ -5,14 +5,15 @@ import { faCookie, faStar, faUtensils } from "@fortawesome/free-solid-svg-icons"
 
 import "../styles/pages/AllRecipes.css";
 
-import VitaImg from "../images/vita.jpg";
 import Footer from "../components/Footer";
 import RecipeSimple from "../components/RecipeSimple";
+import SearchBox from "../components/SearchBox";
 
 const AllRecipes = () => {
     return (
         <div className="container">
             <Navbar/>
+            <SearchBox/>
             <div className="foundRecipes">
                 <div className="titleContainer">
                     <div className="title">
@@ -22,6 +23,24 @@ const AllRecipes = () => {
                 </div>
 
                 <div className="recipes">
+                    <RecipeSimple recipe={
+                        {
+                            title:"Banana Bread",
+                            chefName:"Florin Dumitrescu"
+                        }
+                    }/>
+                    <RecipeSimple recipe={
+                        {
+                            title:"Banana Bread",
+                            chefName:"Florin Dumitrescu"
+                        }
+                    }/>
+                    <RecipeSimple recipe={
+                        {
+                            title:"Banana Bread",
+                            chefName:"Florin Dumitrescu"
+                        }
+                    }/>
                     <RecipeSimple recipe={
                         {
                             title:"Banana Bread",
@@ -40,30 +59,12 @@ const AllRecipes = () => {
                     <FontAwesomeIcon icon ={faCookie} className="icon"/>
                 </div>
                 <div className="recipes">
-                    <div className="recipeSimple">
-                        <div className="recipeImage">
-                            <img src={VitaImg} alt="banana bread"/>
-                        </div>
-                        <div className="recipeTitle">
-                            Banana Bread
-                        </div>
-                        <div className="lowerPart">
-                            <div className="recipeChefName">
-                            Florin Dumitrescu
-                            </div>
-
-                            <div className="rating">
-                                <div className="ratingStars">
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                    <RecipeSimple recipe={
+                        {
+                            title:"Banana Bread",
+                            chefName:"Florin Dumitrescu"
+                        }
+                    }/>
                 </div>
             </div>
 
@@ -75,30 +76,12 @@ const AllRecipes = () => {
                     <FontAwesomeIcon icon ={faUtensils} className="icon"/>
                 </div>
                 <div className="recipes">
-                    <div className="recipeSimple">
-                        <div className="recipeImage">
-                            <img src={VitaImg} alt="banana bread"/>
-                        </div>
-                        <div className="recipeTitle">
-                            Banana Bread
-                        </div>
-                        <div className="lowerPart">
-                            <div className="recipeChefName">
-                            Florin Dumitrescu
-                            </div>
-
-                            <div className="rating">
-                                <div className="ratingStars">
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                    <FontAwesomeIcon icon ={faStar}/>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                    <RecipeSimple recipe={
+                        {
+                            title:"Banana Bread",
+                            chefName:"Florin Dumitrescu"
+                        }
+                    }/>
                 </div>
             </div>
 

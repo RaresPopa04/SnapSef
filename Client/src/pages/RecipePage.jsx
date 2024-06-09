@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faFire, faHand, faPlateWheat, faStar, faStarHalf, faUtensilSpoon, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer.jsx";
 import "../styles/pages/RecipePage.css";
-import FoodImg from "../images/vita.jpg"
 
 
 const RecipePage = () =>{
@@ -13,7 +12,7 @@ const RecipePage = () =>{
             <Navbar/>
             <div className="recipeDetails">
                 <div className="recipeImg">
-                    <img src={FoodImg}alt="recipe"/>
+                    <img src="images/vita.jpg"alt="recipe"/>
                 </div>
                 <div className="recipeText">
                     <div className="detailsContainer">
