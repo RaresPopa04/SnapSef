@@ -19,6 +19,7 @@
     border-radius: 10px;
     font-size: 1rem;
     outline: none;
+    overflow: hidden;
 }
 
 .searchContainer .searchBox input{
@@ -30,6 +31,7 @@
     font-size: 1rem;
     padding-left: 40px;
     border-radius: 10px;
+    overflow: hidden;
 
 }
 
@@ -76,6 +78,25 @@
 }
 
 .searchContainer .filter:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.searchContainer .submitBtn{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    height: 40px;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+}
+
+.searchContainer .submitBtn:hover{
+    cursor: pointer;
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
